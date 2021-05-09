@@ -13,20 +13,18 @@ var enemy1 = "Roborto";
 var enemy2 = "Amy Android";
 var enemy3 = "Robo Trumble";
 
-console.log(enemyNames[0]);
-console.log(enemyNames[1]);
-console.log(enemyNames[2]);
-console.log(enemyNames.length);
 
-for(var i = 0; i < 3; i++) {
-  console.log("apple");
+
+for(var i = 0; i < enemyNames.length; i++) {
+ var pickedEmemyName = enemyNames[i];
+ enemyHealth = 50;
+ fight(pickedEnemyName);
 }
-
-var fight = function () {
-    // Alert players that they are starting the round
-    window.alert("Welcome to Robot Gladiators!");
-var promptFight = window.prompt("Would you like to FIGHT or SKIP this battle? Enter 'FIGHT' or 'SKIP' to choose.");
-
+var fight = function(enemyName) {
+  // repeat and execute as long as the enemy-robot is alive 
+  while(enemyHealth > 0) {
+    // place fight function code block here . . .
+  }
 // if player choses to fight, then fight
 if (promptFight === "fight" || promptFight === "FIGHT") {
   // remove enemy's health by subtracting the amount set in the playerAttack variable
@@ -75,4 +73,9 @@ if (promptFight === "fight" || promptFight === "FIGHT") {
 
     
     }
-    //fight();
+    for(var i = 0; i < enemyNames.length; i++) {
+      debugger; 
+    //call fight fucton with enemy-robot
+    fight(enemyNames[i]);
+    }
+    fight ()
